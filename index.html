@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Pattern Planet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>🚀 Pattern Planet</h1>
+    <p>Can you make the same pattern?</p>
+
+    <div class="pattern">
+      🔴 🔴 🔵 🔴 🔴 🔵
+    </div>
+
+    <h2>Your pattern:</h2>
+    <div id="answer" class="pattern"></div>
+
+    <div class="buttons">
+      <button onclick="addShape('⭐')">⭐ Star</button>
+      <button onclick="addShape('🌙')">🌙 Moon</button>
+    </div>
+
+    <button onclick="checkAnswer()">Check</button>
+    <button onclick="resetGame()">Reset</button>
+
+    <p id="result"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
