@@ -5,30 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-  <title>Pattern Game</title>
+  <title>Pattern Planet</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
-    <h1> Pattern Game</h1>
+    <h1>Pattern Game</h1>
     <p>Can you make the same pattern?</p>
 
     <div class="pattern">
-      A A B A A A B
+      🔴 🔴 🔵 🔴 🔴 🔵
     </div>
 
     <h2>Your pattern:</h2>
-    <div id="answer" class="pattern"></div>
 
-    <div class="buttons">
-      <button onclick="addShape('⭐')">⭐ Star</button>
-      <button onclick="addShape('🌙')">🌙 Moon</button>
+    <div id="answer" class="answer-grid">
+      <div class="slot" data-index="0"></div>
+      <div class="slot" data-index="1"></div>
+      <div class="slot" data-index="2"></div>
+      <div class="slot" data-index="3"></div>
+      <div class="slot" data-index="4"></div>
+      <div class="slot" data-index="5"></div>
     </div>
 
-    <button onclick="checkAnswer()">Check</button>
-    <button onclick="resetGame()">Reset</button>
+    <p>Drag the shapes into the empty boxes!</p>
 
-    <p id="result"></p>
+    <div class="shape-tray">
+      <div class="shape" data-shape="⭐">⭐</div>
+      <div class="shape" data-shape="🌙">🌙</div>
+    </div>
+
+    <div class="controls">
+      <button onclick="checkAnswer()">Check</button>
+      <button onclick="resetGame()">Reset</button>
+    </div>
+
+    <p id="result" aria-live="polite"></p>
   </main>
 
   <script src="script.js"></script>
